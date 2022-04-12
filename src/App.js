@@ -11,8 +11,6 @@ function App() {
     { price: 150000, name: "Iphone 10S Plus", quantity: 0 },
     { price: 120000, name: "Iphone 8", quantity: 0 },
     { price: 100000, name: "Iphone 7", quantity: 0 },
-    { price: 80000, name: "Iphone 6S", quantity: 0 },
-    { price: 60000, name: "Iphone 6", quantity: 0 },
   ];
   let [products, setProducts] = useState(productList);
   let [totalAmount, setTotalAmount] = useState(0);
@@ -66,7 +64,7 @@ function App() {
   };
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar noOfProducts={products.length}></Navbar>
       <main className="container mt-5">
         <Additem addItem={addItem}></Additem>
         <ProductList
